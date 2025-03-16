@@ -1,7 +1,6 @@
 import streamlit as st
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from gtts import gTTS
 import calendar
 
 # Page configuration
@@ -68,10 +67,6 @@ def calculate_age(birth_date):
         "next_birthday_date": next_birthday
     }
 
-def generate_birthday_wish():
-    tts = gTTS(text="Happy Birthday! Wishing you an amazing day filled with joy and happiness!", lang='en')
-    tts.save("birthday_wish.mp3")
-    st.audio("birthday_wish.mp3")
 
 if st.button("Calculate My Age!", use_container_width=True):
     age_data = calculate_age(birth_date)
