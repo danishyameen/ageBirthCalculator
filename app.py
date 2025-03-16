@@ -75,7 +75,6 @@ if st.button("Calculate My Age!", use_container_width=True):
     if birth_date.month == today.month and birth_date.day == today.day:
         st.balloons()
         st.success("🎉 Happy Birthday! 🎉")
-        generate_birthday_wish()
     
     # Age results
     with st.expander("AGE BREAKDOWN", expanded=True):
